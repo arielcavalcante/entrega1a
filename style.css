@@ -1,0 +1,59 @@
+:root {
+	font-family: 'Courier New', Courier, monospace;
+	color: white;
+	background-color: lightsteelblue;
+}
+:root * {
+	box-sizing: border-box;
+}
+body > * {
+	margin: auto;
+}
+body {
+	box-shadow: unset;
+	border: none;
+}
+
+iframe {
+	height: 38rem;
+	width: 45rem;
+}
+#emf-container-outer{
+	margin: auto;
+	height: 30rem;
+	width: 40rem;
+}
+
+label {
+	display: block;
+	width: 100%;
+	margin-bottom: 0.125rem;
+}
+#nome,
+#email,
+#mensagem {
+	padding: 0.25rem !important;
+	outline-color: palevioletred;
+}
+
+.primary-button {
+	color: white;
+	background-color: palevioletred;
+	padding: 0.25rem 2rem;
+	border: palevioletred;
+	border-radius: 0.25rem;
+	box-shadow: 0.125rem 0.125rem rgba(55, 0, 0, 0.3) !important;
+	outline-color: #be5670;
+}
+.primary-button:hover {
+	cursor: pointer;
+	box-shadow: 0.125rem 0.125rem 0.75rem rgba(55, 0, 0, 0.3) !important;
+}
+.primary-button:active {
+	cursor: pointer;
+	border: palevioletred;
+	box-shadow: 0.0625rem 0.0625rem rgba(55, 0, 0, 0.6) !important;
+}
+
+/* #emf-container,
+#emf-container-outer #emf-form-shadows */
