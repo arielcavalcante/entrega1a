@@ -6,6 +6,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contato</title>
 		<link rel="stylesheet" href="style.css" />
+		<style>
+			:root *{
+				box-sizing: border-box;
+			}
+			#emf-container,
+			#emf-container-outer #emf-form-shadows {
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				width: 640px;
+			}
+			@media screen and (max-width: 656px) {
+				#emf-container,
+				#emf-container-outer #emf-form-shadows {
+					width: 100%;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<link
@@ -23,21 +41,6 @@
 			type="text/css"
 			href="https://app.emailmeform.com/builder/theme_css/wPiIC4mR7Y9gQk3l9"
 		/>
-		<style>
-			#emf-container,
-			#emf-container-outer #emf-form-shadows {
-				box-sizing: border-box;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				width: 640px;
-			}
-			@media screen and (max-width: 656px) {
-				#emf-container,
-				#emf-container-outer #emf-form-shadows {
-					width: 100%;
-				}
-			}
-		</style>
 		<script>
 			function is_iframe() {
 				return false;
@@ -45,7 +48,6 @@
 		</script>
 		<div id="emf-container-outer">
 			<div id="emf-container">
-				<div id="emf-logo"><a>EmailMeForm</a></div>
 				<div class="emf-error-message" style="display: none"></div>
 				<form
 					id="emf-form"
@@ -73,6 +75,7 @@
 									size="30"
 									type="text"
 									class="validate[optional]"
+									style="width: 100%"
 								/>
 							</div>
 							<div class="emf-clear"></div>
@@ -90,6 +93,7 @@
 									value=""
 									size="30"
 									type="text"
+									style="width: 100%"
 								/>
 							</div>
 							<div class="emf-clear"></div>
@@ -103,9 +107,8 @@
 								<textarea
 									id="element_2"
 									name="element_2"
-									cols="45"
-									rows="10"
 									class="validate[optional]"
+									style="width: 100%; height: 5rem"
 								></textarea>
 							</div>
 							<div class="emf-clear"></div>
@@ -255,11 +258,8 @@
 								js_calendar_year: 'Year',
 							};
 						</script>
-						<script
-							src="//assets.emailmeform.com/cache/1612141200b6fbe3961eb21403307acf49423e00e4.js"
-							charset="UTF-8"
-						></script>
-						<script charset="UTF-8">
+						<script src="//assets.emailmeform.com/cache/1612141200b6fbe3961eb21403307acf49423e00e4.js"></script>
+						<script>
 							$(document).ready(function () {
 								if (!EMF.Recaptcha.initialized()) {
 									EMF.Recaptcha.init().then(function () {
@@ -282,54 +282,13 @@
 							></div>
 						</li>
 						<li id="emf-li-post-button" class="right">
-							<input
-								src="//assets.emailmeform.com//builder/images/submit-orange.png"
-								type="image"
-								alt="Submit"
-								onmouseover="return true;"
-							/>
+							<button type="submit" class="primary-button">Enviar</button>
 						</li>
 					</ul>
 					<input name="element_counts" value="3" type="hidden" />
 					<input name="embed" value="forms" type="hidden" />
-					<div style="margin-top: 18px; text-align: center">
-						<div id="emf_advertisement">
-							<font face="Verdana" size="2" color="#000000">Powered by</font
-							><span style="position: relative; padding-left: 3px; bottom: -5px"
-								><img
-									src="//assets.emailmeform.com/images/footer-logo.png?bWFzdGVy" /></span
-							><font face="Verdana" size="2" color="#000000">EMF </font
-							><a
-								style="text-decoration: none"
-								href="https://www.emailmeform.com/"
-								target="_blank"
-								><font face="Verdana" size="2" color="#000000"
-									>Online Form Builder</font
-								></a
-							>
-						</div>
-						<div>
-							<font face="Verdana" size="2" color="#000000"
-								><a
-									rel="nofollow"
-									style="
-										line-height: 20px;
-										font-size: 70%;
-										text-decoration: none;
-									"
-									href="https://www.emailmeform.com/report-abuse.html?https://www.emailmeform.com/builder/form/wPiIC4mR7Y9gQk3l9"
-									target="_blank"
-									>Report Abuse</a
-								></font
-							>
-						</div>
-					</div>
 				</form>
 			</div>
-			<img
-				id="emf-form-shadows"
-				src="//assets.emailmeform.com/images/themes/bottom.png?bWFzdGVy"
-			/>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script>
@@ -389,12 +348,6 @@
 				) {
 					event.stopPropagation();
 				});
-
-				EMF_jQuery('#emf-form ul li').mousedown(highlight_field_on_mousedown);
-				EMF_jQuery(
-					'#emf-form ul li input, #emf-form ul li textarea, #emf-form ul li select'
-				).focus(highlight_field_on_focus);
-
 				var form_obj = EMF_jQuery('#emf-container form');
 				if (
 					form_obj.length > 0 &&

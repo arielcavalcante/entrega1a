@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,500&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
@@ -23,7 +28,7 @@
 		- listas 
 		- tabelas e blocos (pode ser um estilo por página) 
 		- dados do form devem ser enviados por email.
-	-->
+		-->
 		<!--
 		- Logo 
 		- Menu 
@@ -43,41 +48,141 @@
 			- Distribuição de orçamento 
 			- Default: Mais barato + 20% 
 			- [Logo] [Titulo] [Menu] [ Pesquisa ]
-		[ features ] ======== fold ======== [ footer ] [Logo] [Titulo] [Menu] [
-		Resultado ] [ Resultado ] [ ] [ Resultado ] [ Resultado ] -->
-		<link
+		 [ features ] ======== fold ========
+		 [ footer ] [ Logo ] [ Titulo ] [ Menu ]
+		 [ Resultado ] [ Resultado ] [  ] [ Resultado ] [ Resultado ] -->
+		<!-- <link
 			rel="stylesheet"
 			type="text/css"
 			href="//assets.emailmeform.com/styles/dynamic.php?t=post&enable_responsive_ui=1&bWFzdGVy"
-		/>
-		<link
-			href="//fonts.googleapis.com/css?family=Lato"
-			rel="stylesheet"
-			type="text/css"
-		/>
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="https://app.emailmeform.com/builder/theme_css/wPiIC4mR7Y9gQk3l9"
-		/>
-		<!-- <style>
-			#emf-container,
-			#emf-container-outer #emf-form-shadows {
-				box-sizing: border-box;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				width: 640px;
-			}
-			@media screen and (max-width: 656px) {
-				#emf-container,
-				#emf-container-outer #emf-form-shadows {
-					width: 100%;
-				}
-			}
-		</style> -->
-		<iframe src="form.html" title="Formulário de Contato"></iframe>
-		<!-- <script src="form.js"></script> -->
+		/> -->
+		<header>
+			<h1 class="hero">Planeje Sua Viagem</h1>
+			<div class="icon-wrapper menu-button">
+				<span>=</span>
+			</div>	
+			<nav style="display: none;">
+				<div class="icon-wrapper close-button">
+					<span>+</span>
+				</div>	
+				<ul>
+					<li>menu</li>
+					<li>
+						<a href="#inicio">Início</a>
+					</li>
+					<li>
+						<a href="#viajar">Viajar Barato</a>
+					</li>
+					<li>
+						<a href="#contato">Contato</a>
+					</li>
+				</ul>
+			</nav>
+			<section class="search-block" id="inicio">
+				<div class="search-box">
+					<label for="origem">Origem</label>
+					<select
+						name="origem"
+						id="origem"
+						aria-label="origem da viagem"
+						required
+						autofocus
+					>
+						<option value="" selected disabled hidden></option>
+						<option value="aracaju">Aracaju - SE</option>
+						<option value="fortaleza">Fortaleza - CE</option>
+						<option value="joao pessoa">João Pessoa - PA</option>
+						<option value="maceio">Maceió - AL</option>
+						<option value="natal">Natal - RN</option>
+						<option value="recife">Recife - PB</option>
+						<option value="salvador">Salvador - BA</option>
+						<option value="são luís">São Luís - MA</option>
+						<option value="teresina">Teresina - PI</option>
+					</select>
+				</div>
+				<div class="search-box">
+					<label for="destinos">Destino</label>
+					<select
+						name="destinos"
+						id="destinos"
+						aria-label="destino de viagem"
+						required
+					>
+						<option value="" selected disabled hidden></option>
+						<option value="aracaju">Aracaju - SE</option>
+						<option value="fortaleza">Fortaleza - CE</option>
+						<option value="joao pessoa">João Pessoa - PA</option>
+						<option value="maceio">Maceió - AL</option>
+						<option value="natal">Natal - RN</option>
+						<option value="recife">Recife - PB</option>
+						<option value="salvador">Salvador - BA</option>
+						<option value="são luís">São Luís - MA</option>
+						<option value="teresina">Teresina - PI</option>
+					</select>
+				</div>
+				<div class="date">
+					<div class="search-box">
+						<label for="ida">Ida</label>
+						<input type="date" name="ida" id="ida" aria-label="data de ida" />
+					</div>
+					<div class="search-box">
+						<label for="volta">Volta</label>
+						<input
+							type="date"
+							name="volta"
+							id="volta"
+							aria-label="data de volta"
+						/>
+					</div>
+				</div>
+				<button type="submit" class="primary-button">Buscar</button>
+			</section>
+		</header>
+		<main>
+			<section id="viajar">
+				<h2>Blog</h2>
+				<div class="blog">
+					<div class="pacotes">
+						<figure>
+							<img
+								src="https://images.unsplash.com/photo-1615068533728-bedd8c32d06f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
+								alt="Foto da entrada de uma barraca de praia repleta de coqueiros e palmeiras com duas mulheres entrando"
+							/>
+							<figcaption>Fortaleza, CE, Brasil - Maick Maciel</figcaption>
+						</figure>
+						<h2>Pacotes de viagem pra viajar barato</h2>
+						<h6>
+							Lugares pra viajar de avião e aproveitar o próximo feriadão como
+							você gosta: curtindo numa festa, na tranquilidade, na natureza ou de
+							casalzinho.
+						</h6>
+					</div>
 
-		<!-- <script src="index.js"></script> -->
+					<div id="brasil">
+						<figure>
+							<img
+								src="https://images.unsplash.com/photo-1604878434055-2ea819d5cbd2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
+								alt="Foto de uma baía cheia de banhistas em Arraial do Cabo, RJ, Brasil"
+							/>
+							<figcaption>
+								Arraial do Cabo, RJ, Brasil - Jonathan Borba
+							</figcaption>
+						</figure>
+						<h2>Lugares pra viajar no Brasil</h2>
+						<h6>
+							Paraísos inexplorados, gastronomia de rua, cultura local, e
+							experiências únicas.
+						</h6>
+					</div>
+				</div>
+			</section>
+		</main>
+		<iframe
+			id="contato"
+			src="form.html"
+			title="Formulário de Contato"
+			frameborder="0"
+		></iframe>
+		<script src="index.js"></script>
 	</body>
 </html>

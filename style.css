@@ -1,27 +1,299 @@
 :root {
-	font-family: 'Courier New', Courier, monospace;
-	color: white;
-	background-color: lightsteelblue;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	color: #0a464f;
+	background-color: #b1e0e7;
 }
 :root * {
 	box-sizing: border-box;
 }
-body > * {
+
+body {
+	padding: 3rem;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	margin: 5rem 0;
+}
+/* ~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~ */
+
+header {
+	display: flex;
+	justify-content: space-between;
 	margin: auto;
 }
-body {
-	box-shadow: unset;
-	border: none;
+h1.hero {
+	font-size: 9vw;
+	font-weight: 900;
+	width: 45%;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+.search-block {
+	color: white;
+	width: 47.5%;
+	height: 20rem;
+	background: rgba(0, 63, 71, 0.96);
+	opacity: 96%;
+	padding-top: 1rem;
+	margin: 2rem 0 0 0;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.25rem 2.25rem rgba(0, 63, 71, 0.26);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.search-box {
+	width: 90%;
+	margin: auto;
+}
+.date {
+	width: 100%;
+	display: flex;
+	margin: auto;
+}
+.date .search-box {
+	width: 40%;
+}
+.search-block .primary-button {
+	margin: 2.5rem;
 }
 
-iframe {
-	height: 38rem;
-	width: 45rem;
+/*~~~~~~~~~~~~~~~ Conteúdo ~~~~~~~~~~~~~~~~*/
+#viajar {
+	display: block;
 }
-#emf-container-outer{
+
+#viajar > div{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+#viajar > div > div{
+	background-color: white;
+	display: block;
+	width: 47.5%;
+	border-radius: 0.75rem;
+	padding: 1rem;
+}
+figure {
+	margin: 0;
+	width: 100%;
+}
+figcaption {
+	font-size: 0.75rem;
+	display: block;
+	text-align: center;
+	padding: 0.25rem;
+}
+img {
+	border-radius: 0.5rem;
+	object-fit: cover;
+	object-position: 0 70%;
+	height: 20vh;
+	width: 100%;
+	/* margin: 5% auto; */
+
+	display: block;
+}
+#viajar h2 {
+	font-size: 1.125rem;
+	margin: 0.25rem 0;
+}
+#viajar > h2 {
+	font-size: 2.5rem;
+}
+#viajar h6 {
+	font-size: 0.8125rem;
+	font-weight: 500;
+	color: #5c8489;
+	margin: 0.125rem 0 0 0;
+}
+input, select{
+	border-radius: 7rem;
+}
+input,
+select, textarea {
+	height: 1.75rem;
+	border: solid 0.0625rem #0a464f;
+}
+input:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	border: solid 0.125rem #ffe977;
+}
+
+input,
+select,
+textarea {
+	padding: 0.25rem;
+	width: 100%;
+}
+.primary-button {
+	background: #ffe977;
+	font-size: 1.1875rem;
+	padding: 0.75rem 2.5rem;
+	border-radius: 5rem;
+	box-shadow: 0 .125rem .375rem rgba(0, 63, 71, 0.34);
+}
+.primary-button:hover {
+	cursor: pointer;
+	box-shadow: 0.125rem 0.125rem 0.75rem rgba(55, 0, 0, 0.3);
+}
+.primary-button:active {
+	box-shadow: 0.0625rem 0.0625rem rgba(55, 0, 0, 0.6);
+}
+.primary-button:focus {
+	border: solid .125rem purple;
+	box-shadow: 0.125rem 0.125rem rgba(55, 0, 0, 0.6);
+}
+button {
+	border: none;
+	outline: none;
+}
+
+/*~~~~~~~~~~~~~~~ Responsividade ~~~~~~~~~~~~~~~~*/
+@media (max-width: 568px) {
+	body {
+		padding: 5vw;
+	}
+	header {
+		flex-direction: column;
+	}
+	h1.hero {
+		width: 100%;
+		font-size: 20vw;
+	}
+	.search-block {
+		padding: 1rem;
+		width: 100%;
+		margin: 3rem 0;
+	}
+	main {
+		position: relative;
+	}
+	#viajar > div {
+		width: 100%;
+		flex-direction: column;
+	}
+	#viajar > div > div {
+		width: 100%;
+		margin: 1rem 0;
+	}
+	#viajar img {
+		height: 30vh;
+	}
+}
+
+nav {
+	height: 100%;
+	max-width: 15rem;
+	width: 75% !important;
+	background-color: #0a464f;
+	box-shadow: -0.25rem 0 5rem rgba(0, 63, 71, 0.96);
+	z-index: 1;
+	display: flex;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+header nav ul {
+	padding: 1rem 2rem 3rem;
 	margin: auto;
+	width: 100%;
+}
+header nav ul li a {
+	width: 100%;
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	display: block;
+}
+header nav ul li:first-of-type {
+	margin: 1rem 0 2rem -1rem;
+	font-size: 1.5rem;
+	color: white;
+}
+header nav > span {
+	color: white;
+	position: absolute;
+}
+div.icon-wrapper {
+	width: 2.5rem;
+	height: 2.5rem;
+	display: block;
+}
+nav div.close-button, div.menu-button{
+	color: #ffe977;
+	background-color: #0a464f;
+	margin-left: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+}
+.close-button:hover {
+	color: #0a464f;
+	background: #ffe977;
+}
+div.menu-button {
+	color: #0a464f;
+	background: unset;
+}
+.menu-button:hover {
+	color: #0a464f;
+	background: #ffe977;
+}
+ div.icon-wrapper span {
+	position: absolute;
+	font-size: 1.5rem;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotateZ(45deg);
+}
+div.menu-button span{
+	transform: translate(-50%, -50%) rotateZ(0);
+}
+a,
+a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+a:hover {
+	color: #ffe977;
+}
+a:active {
+	color: #0a464f;
+	background-color: #ffe977;
+}
+li {
+	list-style: none;
+	margin: 0.5rem;
+}
+ul {
+	padding-inline-start: 0;
+	margin: 0;
+}
+
+/*~~~~~~~~~~~~~~~ Form de Contato ~~~~~~~~~~~~~~~~*/
+iframe {
+	display: block;
 	height: 30rem;
-	width: 40rem;
+	overflow: hidden;
+	width: 100% !important;
+}
+#emf-container {
+	width: 100% !important;
+	padding: 0;
+	border-radius: 0.75rem !important;
+}
+#emf-form {
+	padding: 3rem;
+	padding: 1rem !important;
 }
 
 label {
@@ -29,31 +301,6 @@ label {
 	width: 100%;
 	margin-bottom: 0.125rem;
 }
-#nome,
-#email,
-#mensagem {
+[id^='element_'] {
 	padding: 0.25rem !important;
-	outline-color: palevioletred;
 }
-
-.primary-button {
-	color: white;
-	background-color: palevioletred;
-	padding: 0.25rem 2rem;
-	border: palevioletred;
-	border-radius: 0.25rem;
-	box-shadow: 0.125rem 0.125rem rgba(55, 0, 0, 0.3) !important;
-	outline-color: #be5670;
-}
-.primary-button:hover {
-	cursor: pointer;
-	box-shadow: 0.125rem 0.125rem 0.75rem rgba(55, 0, 0, 0.3) !important;
-}
-.primary-button:active {
-	cursor: pointer;
-	border: palevioletred;
-	box-shadow: 0.0625rem 0.0625rem rgba(55, 0, 0, 0.6) !important;
-}
-
-/* #emf-container,
-#emf-container-outer #emf-form-shadows */
