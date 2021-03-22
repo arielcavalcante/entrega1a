@@ -13,49 +13,6 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!--
-		- Escolha uma das opções abaixo para criar um site e hospedá-lo em um
-		servidor web real. Temas: 5. Compra de pacote de turismo com emissão de
-		passagens, hotel... Obrigatoriamente: 
-		- pelo menos duas páginas 
-		- uso de
-		menu 
-		- uso de no mínimo quatro componentes de formulários 
-		- multicores -
-		estilos (CSS) 
-		- dois scripts 
-		- imagens 
-		- listas 
-		- tabelas e blocos (pode ser um estilo por página) 
-		- dados do form devem ser enviados por email.
-		-->
-		<!--
-		- Logo 
-		- Menu 
-		- Pesquisa (opcionais) 
-			- Onde 
-			- (Quando) 
-			- (Com Quem) 
-			- (Com Quanto) 
-		- Resultado 1 
-			- Simulação 
-			- Dados Informados 
-			- Dados Calculados 
-			- Quando [Data com melhor preço a partir de 3 meses da data atual] 
-			- Com Quanto [Melhor custo-benefício] 
-		- Resultado 2 
-			- Ajustes 
-			- Distribuição de orçamento 
-			- Default: Mais barato + 20% 
-			- [Logo] [Titulo] [Menu] [ Pesquisa ]
-		 [ features ] ======== fold ========
-		 [ footer ] [ Logo ] [ Titulo ] [ Menu ]
-		 [ Resultado ] [ Resultado ] [  ] [ Resultado ] [ Resultado ] -->
-		<!-- <link
-			rel="stylesheet"
-			type="text/css"
-			href="//assets.emailmeform.com/styles/dynamic.php?t=post&enable_responsive_ui=1&bWFzdGVy"
-		/> -->
 		<header>
 			<h1 class="hero">Planeje Sua Viagem</h1>
 			<div class="icon-wrapper menu-button">
@@ -142,7 +99,7 @@
 			<section id="viajar">
 				<h2>Pacotes</h2>
 				<div class="pacotes__wrapper">
-					<div class="pacotes">
+					<div class="pacotes card" id="bonito">
 						<figure>
 							<img
 								src="./assets/bonito-ms.jpg"
@@ -150,7 +107,11 @@
 							/>
 							<figcaption>Bonito, MS - Caio Vilela</figcaption>
 						</figure>
-						<h3>Viaje para Bonito - MS</h3>
+						<h3>
+							<a href="./pacotes/bonito.html" class="main-link"
+								>Viaje para Bonito - MS</a
+							>
+						</h3>
 						<h6>
 							<span>
 								Um dos melhores passeios para se fazer em Bonito, a gruta do
@@ -169,7 +130,7 @@
 						</h6>
 					</div>
 
-					<div class="pacotes">
+					<div class="pacotes card" id="ubajara">
 						<figure>
 							<img
 								src="./assets/bondinho.jpg"
@@ -177,7 +138,11 @@
 							/>
 							<figcaption>Ubajara, CE - Cid Barbosa</figcaption>
 						</figure>
-						<h3>Promoção pra Ubajara - CE</h3>
+						<h3>
+							<a href="./pacotes/ubajara.html" class="main-link"
+								>Promoção pra Ubajara - CE</a
+							>
+						</h3>
 						<h6>
 							<span>
 								Localizado no interior do Ceará, Ubajara é um destino único no
@@ -198,7 +163,7 @@
 				</div>
 				<h2>Blog</h2>
 				<div class="blog__wrapper">
-					<div class="blog">
+					<div class="blog card">
 						<figure>
 							<img
 								src="https://images.unsplash.com/photo-1615068533728-bedd8c32d06f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
@@ -214,7 +179,7 @@
 						</h6>
 					</div>
 
-					<div class="blog">
+					<div class="blog card">
 						<figure>
 							<img
 								src="https://images.unsplash.com/photo-1604878434055-2ea819d5cbd2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"

@@ -32,6 +32,11 @@ h1.hero {
 	margin-block-start: 0;
 	margin-block-end: 0;
 }
+h1.large {
+	margin: auto;
+	text-align: center;
+	white-space: nowrap;
+}
 .search-block {
 	color: white;
 	width: 100%;
@@ -77,7 +82,6 @@ h1.hero {
 #viajar > div > div {
 	background-color: white;
 	display: block;
-	height: 23rem;
 	border-radius: 0.75rem;
 	padding: 1rem;
 }
@@ -105,6 +109,9 @@ img {
 	object-fit: cover;
 	object-position: 0 70%;
 	display: block;
+}
+#bonito img {
+	object-position: 0 90%;
 }
 #viajar h2 {
 	font-size: 1.125rem;
@@ -167,6 +174,7 @@ textarea {
 }
 .primary-button:hover {
 	cursor: pointer;
+	background-color: #ffdf5e;
 	box-shadow: 0.125rem 0.125rem 0.75rem rgba(55, 0, 0, 0.3);
 }
 .primary-button:active {
@@ -174,44 +182,51 @@ textarea {
 }
 .primary-button:focus {
 	border: solid 0.125rem purple;
-	box-shadow: 0.125rem 0.125rem rgba(55, 0, 0, 0.6);
 }
 button {
 	border: none;
 	outline: none;
 }
-
-/* .search-block {
-	padding: 1rem;
-	width: 100%;
-	margin: 3rem 0;
+.card:hover {
+	cursor: pointer;
+	box-shadow: 0.125rem 0.125rem 1.75rem rgba(0, 55, 55, 0.1);
 }
-main {
-	position: relative;
+.card:active {
+	cursor: pointer;
+	box-shadow: 0.0625rem 0.0625rem 0.25rem rgba(0, 55, 55, 0.3);
 }
-#viajar > div {
-	width: 100%;
-	flex-direction: column;
+h3 a,
+h3 a:visited {
+	text-decoration: none;
+	color: #0a464f;
 }
-#viajar > div > div {
-	height: 23rem;
-	width: 100%;
-	margin: 1rem 0;
+h3 a:hover {
+	text-decoration: underline;
 }
-#viajar img {
-	height: 30vh;
+h3 a:active {
+	color: #0a464f;
+	background-color: #ffe977;
 }
-#viajar h6 {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
+article {
+	display: block;
+	background-color: white;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	margin-top: 10vh;
 }
-.pacotes,
-div .blog {
-	height: 1rem;
-} */
+article h4 {
+	font-size: 1.2rem;
+}
+article h4:not(:first-of-type) {
+	margin: 7vh 0 2vh 0;
+}
+article h4:first-of-type {
+	margin-top: 0;
+}
+.pacote.primary-button {
+	display: block;
+	margin: 10vh auto;
+}
 /* ~~~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~~~~~ */
 
 nav {
@@ -284,15 +299,15 @@ div.icon-wrapper span {
 div.menu-button span {
 	transform: translate(-50%, -50%) rotateZ(0);
 }
-a,
-a:visited {
+li a,
+li a:visited {
 	text-decoration: none;
 	color: #fff;
 }
-a:hover {
+li a:hover {
 	color: #ffe977;
 }
-a:active {
+li a:active {
 	color: #0a464f;
 	background-color: #ffe977;
 }
@@ -330,6 +345,14 @@ ul {
 	[class$='wrapper'] > div {
 		width: 47.5%;
 		margin-bottom: 0;
+	}
+	h1.large {
+		font-size: 5vw;
+		text-align: center;
+		margin: 10vh auto;
+	}
+	article h4 {
+		font-size: 1.5rem;
 	}
 }
 
